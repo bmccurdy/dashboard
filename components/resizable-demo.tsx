@@ -16,7 +16,7 @@ export function ResizableDemo() {
 
   return (
     <div className="flex flex-col h-screen">
-      <header className="bg-primary text-primary-foreground p-4">
+      <header className="bg-[#003d57] text-primary-foreground p-4">
         <h1 className="text-2xl font-bold">FirstWatch</h1>
       </header>
       
@@ -96,7 +96,7 @@ export function ResizableDemo() {
         </aside>
 
         <div className="flex-grow flex">
-          <ResizablePanelGroup direction="horizontal" className="min-h-[200px] rounded-lg border">
+          <ResizablePanelGroup direction="horizontal" className="min-h-[200px]">
             <ResizablePanel defaultSize={100}>
               <ResizablePanelGroup direction="vertical">
                 <ResizablePanel defaultSize={50}>
@@ -104,8 +104,8 @@ export function ResizableDemo() {
                     <span className="font-semibold">One</span>
                   </div>
                 </ResizablePanel>
-                <ResizableHandle />
-                <ResizablePanel defaultSize={50}>
+                <ResizableHandle className="bg-border hover:bg-blue-400 p-0.5" />
+                <ResizablePanel defaultSize={50} minSize={8}>
                   <div className="flex h-full items-center justify-center p-6">
                     <span className="font-semibold">Two</span>
                   </div>
@@ -114,8 +114,8 @@ export function ResizableDemo() {
             </ResizablePanel>
             {isBoxOneVisible && (
               <>
-                <ResizableHandle />
-                <ResizablePanel defaultSize={34}>
+                <ResizableHandle className="bg-border hover:bg-blue-400 p-0.5" />
+                <ResizablePanel minSize={24} maxSize={40}>
                   <div className="flex h-full items-center justify-center p-6">
                     <span className="font-semibold">Three</span>
                   </div>
@@ -126,7 +126,7 @@ export function ResizableDemo() {
           <Button
             variant="ghost"
             size="icon"
-            className="h-full rounded-none"
+            className="h-full rounded-none border-l"
             onClick={() => setIsBoxOneVisible(!isBoxOneVisible)}
             aria-label={isBoxOneVisible ? "Hide Box One" : "Show Box One"}
           >
