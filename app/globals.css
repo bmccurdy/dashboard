@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Lato', Arial, Helvetica, sans-serif; /* Use Lato as the main font */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {

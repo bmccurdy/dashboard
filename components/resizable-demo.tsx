@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/resizable"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { Button } from "@/components/ui/button"
+import { AccordionDemo } from "@/components/AccordionDemo";
 import Link from "next/link"
 import { Home, Folder, Settings, ChevronRight, ChevronLeft } from "lucide-react"
 
@@ -100,14 +101,15 @@ export function ResizableDemo() {
             <ResizablePanel defaultSize={100}>
               <ResizablePanelGroup direction="vertical">
                 <ResizablePanel defaultSize={50}>
-                  <div className="flex h-full items-center justify-center p-6">
+                  <div className="flex h-full p-4">
+
                     <span className="font-semibold">One</span>
                   </div>
                 </ResizablePanel>
                 <ResizableHandle className="bg-border hover:bg-blue-400 p-0.5" />
                 <ResizablePanel defaultSize={50} minSize={8}>
-                  <div className="flex h-full items-center justify-center p-6">
-                    <span className="font-semibold">Two</span>
+                  <div className="flex h-full p-4">
+                    <AccordionDemo />
                   </div>
                 </ResizablePanel>
               </ResizablePanelGroup>
@@ -116,7 +118,7 @@ export function ResizableDemo() {
               <>
                 <ResizableHandle className="bg-border hover:bg-blue-400 p-0.5" />
                 <ResizablePanel minSize={24} maxSize={40}>
-                  <div className="flex h-full items-center justify-center p-6">
+                  <div className="flex h-full p-4">
                     <span className="font-semibold">Three</span>
                   </div>
                 </ResizablePanel>
