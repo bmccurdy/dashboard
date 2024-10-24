@@ -9,7 +9,7 @@ import {
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Package2, Home, ShoppingCart, Package, Users2, LineChart, Settings, ChevronRight, ChevronLeft } from "lucide-react"
+import { Home, Folder, Settings, ChevronRight, ChevronLeft } from "lucide-react"
 
 export function ResizableDemo() {
   const [isBoxOneVisible, setIsBoxOneVisible] = useState(false)
@@ -17,7 +17,7 @@ export function ResizableDemo() {
   return (
     <div className="flex flex-col h-screen">
       <header className="bg-primary text-primary-foreground p-4">
-        <h1 className="text-2xl font-bold">Header</h1>
+        <h1 className="text-2xl font-bold">FirstWatch</h1>
       </header>
       
       <div className="flex flex-grow">
@@ -27,32 +27,20 @@ export function ResizableDemo() {
               href="#"
               className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
             >
-              <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
-              <span className="sr-only">Acme Inc</span>
+              <Home className="h-4 w-4 transition-all" />
+              <span className="sr-only">FirstWatch</span>
             </Link>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href="#"
-                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
-                >
-                  <Home className="h-5 w-5" />
-                  <span className="sr-only">Dashboard</span>
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent side="right">Dashboard</TooltipContent>
-            </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                  <ShoppingCart className="h-5 w-5" />
-                  <span className="sr-only">Orders</span>
+                  <Folder className="h-5 w-5" />
+                  <span className="sr-only">Folder One</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Orders</TooltipContent>
+              <TooltipContent side="right">Folder One</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -60,11 +48,11 @@ export function ResizableDemo() {
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                  <Package className="h-5 w-5" />
-                  <span className="sr-only">Products</span>
+                  <Folder className="h-5 w-5" />
+                  <span className="sr-only">Folder Two</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Products</TooltipContent>
+              <TooltipContent side="right">Folder Two</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -72,11 +60,11 @@ export function ResizableDemo() {
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                  <Users2 className="h-5 w-5" />
-                  <span className="sr-only">Customers</span>
+                  <Folder className="h-5 w-5" />
+                  <span className="sr-only">Folder Three</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Customers</TooltipContent>
+              <TooltipContent side="right">Folder Three</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -84,11 +72,11 @@ export function ResizableDemo() {
                   href="#"
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                  <LineChart className="h-5 w-5" />
-                  <span className="sr-only">Analytics</span>
+                  <Folder className="h-5 w-5" />
+                  <span className="sr-only">Folder Four</span>
                 </Link>
               </TooltipTrigger>
-              <TooltipContent side="right">Analytics</TooltipContent>
+              <TooltipContent side="right">Folder Four</TooltipContent>
             </Tooltip>
           </nav>
           <nav className="flex flex-col items-center gap-4 px-2 py-5">
@@ -113,13 +101,13 @@ export function ResizableDemo() {
               <ResizablePanelGroup direction="vertical">
                 <ResizablePanel defaultSize={50}>
                   <div className="flex h-full items-center justify-center p-6">
-                    <span className="font-semibold">Two</span>
+                    <span className="font-semibold">One</span>
                   </div>
                 </ResizablePanel>
                 <ResizableHandle />
                 <ResizablePanel defaultSize={50}>
                   <div className="flex h-full items-center justify-center p-6">
-                    <span className="font-semibold">Three</span>
+                    <span className="font-semibold">Two</span>
                   </div>
                 </ResizablePanel>
               </ResizablePanelGroup>
@@ -129,7 +117,7 @@ export function ResizableDemo() {
                 <ResizableHandle />
                 <ResizablePanel defaultSize={34}>
                   <div className="flex h-full items-center justify-center p-6">
-                    <span className="font-semibold">One</span>
+                    <span className="font-semibold">Three</span>
                   </div>
                 </ResizablePanel>
               </>
