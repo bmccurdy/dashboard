@@ -99,18 +99,16 @@ export function ResizableDemo() {
 
         <div className="flex-grow flex">
           <ResizablePanelGroup direction="horizontal" className="min-h-[200px]">
-            <ResizablePanel defaultSize={100}>
+            <ResizablePanel defaultSize={75} minSize={30}>
               <ResizablePanelGroup direction="vertical">
-                <ResizablePanel defaultSize={50}>
+                <ResizablePanel defaultSize={50} minSize={20}>
                   <div className="flex h-full p-4">
-
                     <span className="font-semibold">One</span>
                   </div>
                 </ResizablePanel>
                 <ResizableHandle className="bg-border hover:bg-blue-400 p-0.5" />
-                <ResizablePanel defaultSize={50} minSize={8}>
-                  <div className="text-lg p-4 pb-0 font-medium">Incident Drill-down</div>
-                  <ScrollArea className="flex h-[calc(100%-4rem)] p-4 pb-0">
+                <ResizablePanel defaultSize={50} minSize={20}>
+                  <ScrollArea className="h-full">
                     <AccordionDemo />
                   </ScrollArea>
                 </ResizablePanel>
@@ -119,7 +117,7 @@ export function ResizableDemo() {
             {isBoxOneVisible && (
               <>
                 <ResizableHandle className="bg-border hover:bg-blue-400 p-0.5" />
-                <ResizablePanel minSize={24} maxSize={40}>
+                <ResizablePanel defaultSize={25} minSize={20} maxSize={40}>
                   <div className="flex h-full p-4">
                     <span className="font-semibold">Three</span>
                   </div>
@@ -139,8 +137,8 @@ export function ResizableDemo() {
         </div>
       </div>
       
-      <footer className="bg-primary text-primary-foreground p-4">
-        <h2 className="text-xl font-semibold">Footer</h2>
+      <footer className="flex justify-center items-center bg-muted text-muted-foreground border-t p-2">
+        <h2 className="font-normal text-sm">Footer</h2>
       </footer>
     </div>
   )
