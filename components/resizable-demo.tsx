@@ -18,8 +18,8 @@ export function ResizableDemo() {
 
   return (
     <div className="flex flex-col h-screen">
-      <header className="bg-[#003d57] text-primary-foreground p-4">
-        <h1 className="text-2xl font-bold">FirstWatch</h1>
+      <header className="bg-[#003d57] text-primary-foreground px-4 py-2">
+        <h1 className="text-xl font-semibold">FirstWatch</h1>
       </header>
       
       <div className="flex flex-grow">
@@ -107,10 +107,10 @@ export function ResizableDemo() {
                     <span className="font-semibold">One</span>
                   </div>
                 </ResizablePanel>
-                <ResizableHandle className="bg-border hover:bg-blue-400 p-0.25" />
+                <ResizableHandle className="bg-border hover:bg-blue-400 p-0.5" />
                 <ResizablePanel defaultSize={50} minSize={8}>
                   <div className="text-lg p-4 pb-0 font-medium">Incident Drill-down</div>
-                  <ScrollArea className="flex h-full p-4">
+                  <ScrollArea className="flex h-[calc(100%-4rem)] p-4 pb-0">
                     <AccordionDemo />
                   </ScrollArea>
                 </ResizablePanel>
@@ -118,7 +118,7 @@ export function ResizableDemo() {
             </ResizablePanel>
             {isBoxOneVisible && (
               <>
-                <ResizableHandle className="bg-border hover:bg-blue-400 p-0.25" />
+                <ResizableHandle className="bg-border hover:bg-blue-400 p-0.5" />
                 <ResizablePanel minSize={24} maxSize={40}>
                   <div className="flex h-full p-4">
                     <span className="font-semibold">Three</span>
