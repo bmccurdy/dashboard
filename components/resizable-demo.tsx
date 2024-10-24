@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button"
 import { AccordionDemo } from "@/components/AccordionDemo";
 import Link from "next/link"
 import { Home, Folder, Settings, ChevronRight, ChevronLeft } from "lucide-react"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 export function ResizableDemo() {
   const [isBoxOneVisible, setIsBoxOneVisible] = useState(false)
@@ -106,17 +107,18 @@ export function ResizableDemo() {
                     <span className="font-semibold">One</span>
                   </div>
                 </ResizablePanel>
-                <ResizableHandle className="bg-border hover:bg-blue-400 p-0.5" />
+                <ResizableHandle className="bg-border hover:bg-blue-400 p-0.25" />
                 <ResizablePanel defaultSize={50} minSize={8}>
-                  <div className="flex h-full p-4">
+                  <div className="text-lg p-4 pb-0 font-medium">Incident Drill-down</div>
+                  <ScrollArea className="flex h-full p-4">
                     <AccordionDemo />
-                  </div>
+                  </ScrollArea>
                 </ResizablePanel>
               </ResizablePanelGroup>
             </ResizablePanel>
             {isBoxOneVisible && (
               <>
-                <ResizableHandle className="bg-border hover:bg-blue-400 p-0.5" />
+                <ResizableHandle className="bg-border hover:bg-blue-400 p-0.25" />
                 <ResizablePanel minSize={24} maxSize={40}>
                   <div className="flex h-full p-4">
                     <span className="font-semibold">Three</span>
