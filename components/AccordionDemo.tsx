@@ -47,7 +47,7 @@ export const AccordionDemo = () => {
 
   return (
     <div className="w-full">
-      <div className="flex p-4 justify-between items-center sticky top-0 bg-background">
+      <div className="flex p-4 justify-between items-center sticky top-0 bg-background z-50">
         <div className="text-lg font-medium">Incident Drill-down</div>
         <Button onClick={toggleAll}>
           {expandedItems.length === triggerNames.length ? (
